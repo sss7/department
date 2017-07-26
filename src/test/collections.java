@@ -52,8 +52,34 @@ class collections {
 //        return ((Object[]) dataField.get(l)).length;
 //    }
 
+
     public static void main(String[] args) throws Throwable {
 
+
+
+//        String s1 = "Java";
+//        String s2 = new String("java");
+//        if (s1.equalsIgnoreCase(s2)) {
+//            System.out.println("Equal");
+//        } else {
+//            System.out.println("Not Equal");
+//        }
+
+
+//        int[] arr = new int[2];
+//        arr[0] = 10;
+//        arr[1] = 20;
+//        System.out.println(arr[0] +":"+ arr[1]);
+
+//        List<String> names = new ArrayList<String>();
+//        names.add("Robb");
+//        names.add("Bran");
+//        names.add("Rick");
+//        names.add("Bran");
+//        if (names.remove("Bran")) {
+//            names.remove("Jon");
+//        }
+//        System.out.println(names);
 
 
 //        int[] arr = new int[]{1,2,5,3,6,1};
