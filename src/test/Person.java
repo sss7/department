@@ -4,14 +4,36 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class ComparatorTest {
-    private ArrayList<Person> personList = new ArrayList<>();
+public class Person {
+    private String name;
+    private String family;
 
-    public static void main(String[] args) {
-        new ComparatorTest().go();
+    private static ArrayList<Person> personList = new ArrayList<>();
+
+    private Person(String name, String family) {
+        this.name = name;
+        this.family = family;
     }
 
-    private void go() {
+    private String getName() {
+        return name;
+    }
+    private String getFamily() {
+        return family;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+
+    public static void main(String[] args) {
+        go();
+    }
+
+    private static void go() {
         createPersonList();
         printList();
 
@@ -20,7 +42,7 @@ public class ComparatorTest {
         printList();
     }
 
-    private void createPersonList() {
+    private static void createPersonList() {
         personList.add(new Person("Richard", "Strauss"));
         personList.add(new Person("Antonio", "Salieri"));
         personList.add(new Person("Niccolo", "Paganini"));
@@ -38,48 +60,24 @@ public class ComparatorTest {
         personList.add(new Person("August", "Schumann"));
     }
 
-    class PersonCompareFamily implements Comparator<Person> {
+    static class PersonCompareFamily implements Comparator<Person> {
         public int compare(Person one, Person two) {
             return one.getFamily().compareTo(two.getFamily());
         }
     }
 
-    class PersonCompareName implements Comparator<Person> {
+    static class PersonCompareName implements Comparator<Person> {
         public int compare(Person one, Person two) {
             return one.getName().compareTo(two.getName());
         }
     }
 
-    private void printList() {
+    private static void printList() {
         for (Person p : personList) {
             System.out.println(p.name + " " + p.family);
         }
         System.out.println("-----");
     }
 
-    static class Person {
-        private String name;
-        private String family;
-
-        Person(String name, String family) {
-            this.name = name;
-            this.family = family;
-        }
-
-        String getName() {
-            return name;
-        }
-        String getFamily() {
-            return family;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-        public void setFamily(String family) {
-            this.family = family;
-        }
-
-    }
 
 }
