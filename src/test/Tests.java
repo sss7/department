@@ -55,8 +55,8 @@ public class Tests {
         while (it.hasNext()) {
             String value = it.next();
             if (value.equals("5")) {
-//                it.remove();
-                list.remove(value);
+                it.remove();
+//                list.remove(value);
             }
         }
         for (String s : list) {

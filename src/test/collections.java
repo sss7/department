@@ -1,5 +1,6 @@
 package test;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -53,9 +54,46 @@ class collections {
 //    }
 
 
+
     public static void main(String[] args) throws Throwable {
 
 
+
+
+//        Integer i1 = 1000;
+//        Integer i2 = 2000;
+//        String s = new String("sssss");
+//        s.concat("-aaa");
+//        System.out.println(s);
+
+//        int i = 0;
+//        i++;
+//        System.out.print(i);
+//        i = i++;
+//        System.out.println(i);
+
+//byte b = 1;
+//        System.out.println(b);
+//
+//int i = 0;
+//i++;
+//        System.out.println(i);
+//        i = i++;
+//        System.out.println(i);
+//
+//        int x = 555;
+//        System.out.println(x == (Integer) 555);
+//
+//        StringBuffer buffer = new StringBuffer("qqqq");
+//        System.out.println(buffer);
+
+//        System.out.println(0.2d == 0.1d + 0.1d);
+//        System.out.println(0.2 == 0.1d + 0.1d);
+//        System.out.println(0.3d == 0.1d + 0.1d + 0.1d);
+//        System.out.println(0.3 == 0.1d + 0.1d + 0.1d);
+
+//        System.out.println((Integer) 1000 == (Integer) 1000);
+//        System.out.println((Integer) 10 == (Integer) 10);
 
 //        String s1 = "Java";
 //        String s2 = new String("java");

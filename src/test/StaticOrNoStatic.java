@@ -19,6 +19,9 @@ public class StaticOrNoStatic {
 
         public void Method() {
             System.out.println("Method in Class B");
+//            if (value --> 5) {
+//                System.out.println(value);
+//            }
         }
 
         public static void StaticMethod() {
