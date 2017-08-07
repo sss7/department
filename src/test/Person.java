@@ -28,6 +28,7 @@ public class Person implements Comparable<Person> {
 //        this.family = family;
 //    }
 
+
     @Override
     public int compareTo(Person o) {
         return family.equals(o.family) ? name.compareTo(o.name) : family.compareTo(o.family);
