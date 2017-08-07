@@ -16,18 +16,18 @@ public class Person implements Comparable<Person> {
         this.family = family;
     }
 
-    private String getName() {
-        return name;
-    }
-    private String getFamily() {
-        return family;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setFamily(String family) {
-        this.family = family;
-    }
+//    private String getName() {
+//        return name;
+//    }
+//    private String getFamily() {
+//        return family;
+//    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//    public void setFamily(String family) {
+//        this.family = family;
+//    }
 
     @Override
     public int compareTo(Person o) {
