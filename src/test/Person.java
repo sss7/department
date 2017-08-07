@@ -3,12 +3,13 @@ package test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private String name;
     private String family;
 
-    private static ArrayList<Person> personList = new ArrayList<>();
+    private static List<Person> personList = new ArrayList<>();
 
     private Person(String name, String family) {
         this.name = name;
@@ -28,6 +29,10 @@ public class Person {
         this.family = family;
     }
 
+    @Override
+    public int compareTo(Person o) {
+        return family.equals(o.family) ? name.compareTo(o.name) : family.compareTo(o.family);
+    }
 
     public static void main(String[] args) {
         go();
@@ -36,9 +41,7 @@ public class Person {
     private static void go() {
         createPersonList();
         printList();
-
-        Collections.sort(personList, new PersonCompareName());
-        Collections.sort(personList, new PersonCompareFamily());
+        Collections.sort(personList);
         printList();
     }
 
@@ -58,18 +61,6 @@ public class Person {
         personList.add(new Person("Franz", "Kafka"));
         personList.add(new Person("Antonio", "Vivaldi"));
         personList.add(new Person("August", "Schumann"));
-    }
-
-    static class PersonCompareFamily implements Comparator<Person> {
-        public int compare(Person one, Person two) {
-            return one.getFamily().compareTo(two.getFamily());
-        }
-    }
-
-    static class PersonCompareName implements Comparator<Person> {
-        public int compare(Person one, Person two) {
-            return one.getName().compareTo(two.getName());
-        }
     }
 
     private static void printList() {
